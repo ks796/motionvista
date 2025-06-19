@@ -1,0 +1,31 @@
+.about {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+  transform-origin: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  color: #eee;
+
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #1abc9c; // لون أكسنت تيل
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ccc;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}

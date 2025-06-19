@@ -1,0 +1,42 @@
+// mixins.scss
+
+// ميكسين لخطوط مرنة مع التحكم في الحجم والوزن واللون
+@mixin font-style($size, $weight: 400, $color: #eee, $lineHeight: 1.5) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  line-height: $lineHeight;
+}
+
+// ميكسين للظل البسيط
+@mixin box-shadow($x: 0, $y: 2px, $blur: 6px, $color: rgba(0, 0, 0, 0.3)) {
+  box-shadow: $x $y $blur $color;
+}
+
+// ميكسين للتحويل مع انتقال سلس
+@mixin transition($properties...) {
+  transition: $properties $transition-time ease-in-out;
+}
+
+// ميكسين للعرض الكامل والارتفاع الكامل (Fullscreen)
+@mixin full-screen {
+  width: 100%;
+  height: 100vh;
+}
+
+// ميكسين لتصميم أزرار بسيطة مع ألوان ديناميكية
+@mixin button-style($bg-color, $color: #fff) {
+  background-color: $bg-color;
+  color: $color;
+  padding: 12px 24px;
+  border-radius: $border-radius;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  @include transition(background-color);
+  
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}

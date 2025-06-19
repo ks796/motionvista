@@ -1,0 +1,108 @@
+/* App.scss */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #121212;
+  color: #eee;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #1abc9c; /* لون التيل */
+  text-decoration: none;
+
+  &:hover {
+    color: #e63946; /* لون أحمر جذاب */
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+section {
+  padding: 60px 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+input, textarea {
+  font-family: inherit;
+  color: #eee;
+  background-color: #222;
+  border: none;
+  outline: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1abc9c;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+/* Container max width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive helpers */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
